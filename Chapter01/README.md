@@ -101,4 +101,3 @@ Source
 
 After reading this article, you should have a good idea of the usefulness of Nsight Systems and Nsight Compute. In the following articles, I will go into more detail.
 
-I hope this translation is accurate and helpful. Let me know if you have any other questions.
