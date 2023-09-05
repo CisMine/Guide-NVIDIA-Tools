@@ -42,15 +42,26 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 ![image](https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/6d0bb179-42a1-4bce-b1ed-3f5682a988b4)
 
 - If you haven't installed CUDA Toolkit yet, please follow these steps:
-   - If your computer has GPU
+   - If your computer has GPU, follow these steps in NIVIDA to install [Cuda Toolkit](https://developer.nvidia.com/cuda-downloads)
   
-     - If you are using Linux, I advise you to watch this video
+     - If you are using Linux, I advise you to watch [this video](https://www.youtube.com/watch?v=wxNQQP9U1Bc)
      
-     - If you are using Windows, this is your video
+     - If you are using Windows, this is [your video](https://www.youtube.com/watch?v=cuCWbztXk4Y&t=49s)
 
 
   - If your computer doesn't have GPU
     
-    - Don't worry; I'll demonstrate how to set up and use Google Colab to code in here
+    - Don't worry; I'll demonstrate how to set up and use Google Colab to code [in here](https://medium.com/@giahuy04/the-easiest-way-to-run-cuda-c-in-google-colab-831efbc33d7a)
   
+<p align="center">
+ <h1 align="center">Table of Contents </h1>
+</p>
 
+<p align="center">
+ <h1 align="center">Resources </h1>
+</p>
+
+In addition to the code examples, this repository provides a curated list of resources, including books, tutorials, online courses, and research papers, to further enhance your understanding of using NVIDIA Tools. These resources will help you delve deeper into the subject and explore advanced topics and techniques.
+
+- [Nsight Systems v2023.3.1 Guide](https://docs.nvidia.com/nsight-systems/UserGuide/index.html)
+- [Nsight Compute v2023.2.1 Guide](https://docs.nvidia.com/nsight-compute/NsightCompute/index.html)
