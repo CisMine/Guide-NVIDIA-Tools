@@ -52,7 +52,21 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
   - If your computer doesn't have GPU
     
     - Don't worry; I'll demonstrate how to set up and use Google Colab to code [in here](https://medium.com/@giahuy04/the-easiest-way-to-run-cuda-c-in-google-colab-831efbc33d7a)
-  
+
+
+<p align="center">
+ <h1 align="center">Prerequisites </h1>
+</p>
+
+- Basic knowledge of C/C++ programming.
+- Understanding of parallel programming concepts.
+- Familiarity with the CUDA programming model.
+- Access to a CUDA-capable GPU.
+
+  ### If you are unfamiliar with these concepts, please refer to this [series parallel computing](https://github.com/CisMine/Parallel-Computing-Cuda-C)
+
+
+ 
 <p align="center">
  <h1 align="center">Table of Contents </h1>
 </p>
