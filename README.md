@@ -71,7 +71,7 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
  <h1 align="center">Table of Contents </h1>
 </p>
 
-[Chapter01: Introduction to Nsight Systems - Nsight Compute](https://github.com/CisMine/Guide-NVIDIA-Tools/edit/main/Chapter01/README.md)
+[Chapter01: Introduction to Nsight Systems - Nsight Compute](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter01)
 
 
 <p align="center">
