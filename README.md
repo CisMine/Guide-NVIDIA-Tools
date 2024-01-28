@@ -17,6 +17,9 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 - ### NVIDIA Nsight Compute:
   Nsight Compute is a GPU profiler that provides detailed insights into the performance of individual GPU kernels. It helps you identify performance bottlenecks at the kernel level and optimize your GPU code accordingly.
 
+- ### NVIDIA Compute Sanitizer:
+  NVIDIA Compute Sanitizer is a tool that helps developers (cuda beginners) find and fix programming errors and memory issues in GPU-accelerated applications, improving reliability and performance.
+
 - ### NVIDIA Nsight Deep Learning Designer (Future):
   Nsight Deep Learning Designer is designed for deep learning model optimization and debugging. While it may not be covered in this repository yet, future updates may include guidance on using this tool for your deep learning projects.
 
