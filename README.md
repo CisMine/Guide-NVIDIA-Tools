@@ -80,6 +80,8 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter02: Cuda toolkit - Cuda driver](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter02)
 
+[Chapter03: NVIDIA Compute Sanitizer Part 1](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter03)
+
 
 
 <p align="center">
