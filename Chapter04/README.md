@@ -3,7 +3,7 @@
 In this article, I will continue discussing how to use the NVIDIA Compute Sanitizer. Please read these articles: [NVIDIA Compute Sanitize Part 1](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter03), [Data Hazard](https://github.com/CisMine/Parallel-Computing-Cuda-C/tree/main/Chapter12) before reading this one.
 
 <p align="center">
- <h1 align="center">NVIDIA Compute Sanitizer </h1>
+ <h1 align="center">NVIDIA Compute Sanitizer Part 2 </h1>
 </p>
 
 Following up on Part 1, Part 2 will cover the remaining two tools:
