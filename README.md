@@ -82,7 +82,7 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter03: NVIDIA Compute Sanitizer Part 1](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter03)
 
-[Chapter04: NVIDIA Compute Sanitizer Part 2 ](https://github.com/CisMine/Guide-NVIDIA-Tools/blob/main/Chapter04/README.md)
+[Chapter04: NVIDIA Compute Sanitizer Part 2 ](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter04)
 
 
 
