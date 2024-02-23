@@ -18,7 +18,7 @@ When discussing global memory access, three key concepts often come up:
 - Sector: Refers to the basic unit of memory that can be accessed simultaneously in a single access, clarifying the scope and method by which data is retrieved or written to memory.
 Though these are three distinct concepts, they share a common goal: optimizing access to a large memory space.
 
-**In summary**, coalescing is about accessing memory in the most optimal way possible (the fewer accesses, the better), alignment involves arranging data optimally, and a sector is the unit of each access.
+**In summary, coalescing is about accessing memory in the most optimal way possible (the fewer accesses, the better), alignment involves arranging data optimally, and a sector is the unit of each access.**
 
 <p align="center">
   <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/0d1f3e00-36a7-4614-8804-dca5d7683aaf " />
