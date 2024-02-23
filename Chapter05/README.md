@@ -13,9 +13,9 @@ Imagine you have a task to distribute candies and cakes to children, each with d
 
 When discussing global memory access, three key concepts often come up:
 
-- Coalescing: This is the process by which **threads within the same warp** access memory simultaneously, optimizing memory access by reducing the number of necessary accesses and speeding up data transfer (similar to the candy and cake distribution, where instead of asking each time, it's already known what to give out, leading to cache hits).
-- Alignment: This relates to organizing data in memory optimally to ensure memory accesses are as efficient as possible, minimizing unnecessary data reads and enhancing processing performance (like organizing children by their preference for cakes or candies on different sides to avoid confusion during distribution).
-- Sector: Refers to the basic unit of memory that can be accessed simultaneously in a single access, clarifying the scope and method by which data is retrieved or written to memory.
+- **Coalescing:** This is the process by which **threads within the same warp** access memory simultaneously, optimizing memory access by reducing the number of necessary accesses and speeding up data transfer (similar to the candy and cake distribution, where instead of asking each time, it's already known what to give out, leading to cache hits).
+- **Alignment:** This relates to organizing data in memory optimally to ensure memory accesses are as efficient as possible, minimizing unnecessary data reads and enhancing processing performance (like organizing children by their preference for cakes or candies on different sides to avoid confusion during distribution).
+- **Sector:** Refers to the basic unit of memory that can be accessed simultaneously in a single access, clarifying the scope and method by which data is retrieved or written to memory.
 Though these are three distinct concepts, they share a common goal: optimizing access to a large memory space.
 
 **In summary, coalescing is about accessing memory in the most optimal way possible (the fewer accesses, the better), alignment involves arranging data optimally, and a sector is the unit of each access.**
@@ -56,7 +56,7 @@ out[id] = in[id];
 
 And we will profile the above code:
 
-**global load transactions per request: the smaller, the better (this is about copying chunks --> checking coalescing)**
+- **global load transactions per request: the smaller, the better (this is about copying chunks --> checking coalescing)**
 
 ```
 ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_ld.ratio ./a.out
@@ -66,7 +66,7 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_ld.rat
   <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/8d3dfa95-cf32-4e07-a141-4a3e52f4b1a0" />
 </p>
 
-**global store transactions per request : the smaller, the better (this is about copying chunks --> checking coalescing)**
+- **global store transactions per request: the smaller, the better (this is about copying chunks --> checking coalescing)**
 
 ```
 ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_st.ratio ./a.out
@@ -78,7 +78,7 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_st.rat
 
 
 
-**global load transactions: (compare to see which kernel has coalescing || the smaller, the better).**
+- **global load transactions: (compare to see which kernel has coalescing || the smaller, the better).**
 
 ```
 ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum ./a.out
@@ -90,7 +90,7 @@ ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum ./a.out
 
 
 
-**global store transactions:(compare to see which kernel has coalescing || the smaller, the better).**
+- **global store transactions:(compare to see which kernel has coalescing || the smaller, the better).**
 
 ```
 ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum ./a.out
@@ -125,9 +125,9 @@ out[id] = in[id];
 
 
 
-In here, we profiling the same:
+Here, we profile the same:
 
-**global load transactions per request: the smaller, the better (this is about copying chunks --> checking coalescing)**
+- **global load transactions per request: the smaller, the better (this is about copying chunks --> checking coalescing)**
 
 ```
 ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_ld.ratio ./a.out
@@ -138,7 +138,7 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_ld.rat
 </p>
 
 
-**global store transactions per request : the smaller, the better (this is about copying chunks --> checking coalescing)**
+- **global store transactions per request: the smaller, the better (this is about copying chunks --> checking coalescing)**
 
 ```
 ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_st.ratio ./a.out
@@ -150,7 +150,7 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_st.rat
 
 
 
-**global load transactions: (compare to see which kernel has coalescing || the smaller, the better).**
+- **global load transactions: (compare to see which kernel has coalescing || the smaller, the better).**
 
 ```
 ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum ./a.out
@@ -240,7 +240,7 @@ Here (as I speculate), the computer optimizes for us: meaning for a certain amou
 
 In the picture above, the offset is 2, and having an offset leads to going out of the cache line (meaning instead of using 1024 * 4 bytes (since it's an int) for an array, here we use 1024 * 2 * 4 bytes).
 
-- An interesting question: **(WE STILL USE GLOBAL MEMORY)** although it is coalescing, we can still improve, so before improving, what is the reason for its slowness?
+- An interesting question: **(WE STILL USE GLOBAL MEMORY)** Although it is coalescing, we can still improve, so before improving, what is the reason for its slowness?
   
 Hint:
   - memory bound (not yet fully utilizing the computer's capabilities)
