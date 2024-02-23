@@ -190,7 +190,7 @@ BUT IF YOU PROFILE FULLY (meaning to output to a .ncu-rep file for use with Nsig
 `One note is that I will not delve too deeply into analyzing Nsight Compute but will leave it for a later article.`
 
 ```
-ncu --set full -o <tên file> ./a.out
+ncu --set full -o <file name> ./a.out
 ```
 
 **And you will notice a somewhat strange point:**
