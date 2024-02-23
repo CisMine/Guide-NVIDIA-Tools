@@ -25,7 +25,7 @@ Though these are three distinct concepts, they share a common goal: optimizing a
 </p>
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/130b4712-2763-4ed6-8b30-925c565550c2" />
 </p>
 
 
@@ -34,7 +34,7 @@ Though these are three distinct concepts, they share a common goal: optimizing a
 </p>
 
 
-I will demonstrate a simple piece of code using 1 block (1 block / 32 threads) and elements (number of elements) = 1024.
+I will demonstrate a simple piece of code using 32 blocks ( 32 threads / block ) and elements (number of elements) = 1024.
 
 <p align="center">
  <h1 align="center"> Coalescing </h1>
@@ -50,7 +50,7 @@ out[id] = in[id];
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/3cbf36db-1203-4a99-987b-6c0fab588b18" />
 </p>
 
 
@@ -63,7 +63,7 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_ld.rat
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/8d3dfa95-cf32-4e07-a141-4a3e52f4b1a0" />
 </p>
 
 **global store transactions per request : the smaller, the better (this is about copying chunks --> checking coalescing)**
@@ -73,7 +73,7 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_st.rat
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/88146a08-3b35-4257-a8d7-326e48585e76" />
 </p>
 
 
@@ -85,8 +85,10 @@ ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum ./a.out
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/9539f644-c68e-49c2-9098-12545ebc2ff0" />
 </p>
+
+
 
 **global store transactions:(compare to see which kernel has coalescing || the smaller, the better).**
 
@@ -95,7 +97,7 @@ ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum ./a.out
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/6ea4d22a-9564-4b48-acd7-d16ce014b173" />
 </p>
 
 
@@ -118,8 +120,10 @@ out[id] = in[id];
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/fdd4a53d-e925-4bb1-aa4c-273277f9e754" />
 </p>
+
+
 
 In here, we profiling the same:
 
@@ -130,8 +134,9 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_ld.rat
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/adb7634f-2ffa-42ec-b8d2-d743cb690240" />
 </p>
+
 
 **global store transactions per request : the smaller, the better (this is about copying chunks --> checking coalescing)**
 
@@ -140,7 +145,7 @@ ncu --metrics l1tex__average_t_sectors_per_request_pipe_lsu_mem_global_op_st.rat
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/fbf7ecdc-0ada-4bbe-ace7-097648acb6f8" />
 </p>
 
 
@@ -152,8 +157,10 @@ ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum ./a.out
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/45dc3e18-dedc-48c4-a27f-e92196c0e15a" />
 </p>
+
+
 
 **global store transactions:(compare to see which kernel has coalescing || the smaller, the better).**
 
@@ -162,7 +169,7 @@ ncu --metrics l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum ./a.out
 ```
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/bc908490-2a0c-48ae-b79f-b24fabc7d119" />
 </p>
 
 
@@ -170,12 +177,13 @@ As I mentioned, even though it still resides within the cache line (meaning the 
 
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/ff57dc22-781b-498c-b587-12324b7a4c0e" />
 </p>
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/6aa74fe7-bae7-4346-8f39-7e8023c45800" />
 </p>
+
 
 BUT IF YOU PROFILE FULLY (meaning to output to a .ncu-rep file for use with Nsight Compute, here is the command line)
 
@@ -191,8 +199,9 @@ ncu --set full -o <tên file> ./a.out
  <h1 align="center">Coalescing </h1>
 </p>
 
+
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/b5c54329-0059-454f-b55e-654523ea6205" />
 </p>
 
 <p align="center">
@@ -201,7 +210,7 @@ ncu --set full -o <tên file> ./a.out
 
 
 <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/238d0766-057e-423d-883d-7a341b7952df" />
 </p>
 
 Why is the Coalescing throughput (GB/s) lower than Mix and the L2 cache hit rate lower, but the total time is faster?
@@ -226,7 +235,7 @@ Here (as I speculate), the computer optimizes for us: meaning for a certain amou
 - Try to code a case with an offset and profiling it
 
   <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/8a74800d-29b0-4fe8-866e-8b29ca7976c2" />
 </p>
 
 In the picture above, the offset is 2, and having an offset leads to going out of the cache line (meaning instead of using 1024 * 4 bytes (since it's an int) for an array, here we use 1024 * 2 * 4 bytes).
@@ -237,7 +246,7 @@ Hint:
   - memory bound (not yet fully utilizing the computer's capabilities)
 
   <p align="center">
-  <img src=" " />
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/20e2848a-6902-47ec-843d-cecab7d4e49d" />
 </p>
 
   - datatype between int ( 4 bytes ) and int4 ( 16 bytes )
