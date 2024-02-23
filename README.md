@@ -84,6 +84,8 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter04: NVIDIA Compute Sanitizer Part 2 ](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter04)
 
+[Chapter05: Global Memory Coalescing](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter05)
+
 
 
 <p align="center">
