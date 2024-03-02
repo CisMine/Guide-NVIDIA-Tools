@@ -86,6 +86,7 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter05: Global Memory Coalescing](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter05)
 
+[Chapter06: Warp Scheduler](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter06)
 
 
 <p align="center">
