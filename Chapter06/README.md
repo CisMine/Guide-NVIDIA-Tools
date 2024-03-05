@@ -65,7 +65,51 @@ The idea is that after a warp is **selected**, it will execute a Memory instruct
 
 Reason: It wastes resources and, given today's computers are very powerful, it means one worker can handle two people at once, but if we only have them handle one person at a time, it's somewhat wasteful ==> one thread handles two elements ===> reduces the number of threads initiated ==> increases registers for each thread + reduces the workload for the warp scheduler.
 
-`For the same reason, when you profile OpenCV CUDA code with Nsight Systems, you will see very few threads being used.`
+`For the same reason, when you profile OpenCV CUDA code with Nsight Systems, you will see very few threads being used. Here is the example using opencv cuda to add 2 images`
+
+```
+#include "opencv2/opencv.hpp"
+#include <opencv2/cudaarithm.hpp>
+
+cv::Mat opencv_add(const cv::Mat &img1, const cv::Mat &img2)
+{
+   cv::cuda::GpuMat d_img1, d_img2, d_result;
+
+   d_img1.upload(img1);
+   d_img2.upload(img2);
+
+   cv::cuda::add(d_img1, d_img2, d_result);
+
+   cv::Mat result;
+   d_result.download(result);
+
+   return result;
+}
+int main()
+{
+   cv::Mat img1 = cv::imread("circles.png");
+   cv::Mat img2 = cv::imread("cameraman.png");
+
+   cv::Mat result = opencv_add(img1, img2);
+
+   cv::imshow("Result", result);
+
+   cv::waitKey();
+
+   return 0;
+}
+```
+
+`Then profile by using Nsight system to see the kernel by this command:`
+
+```
+nsys profile -o test ./a.out
+```
+<p align="center">
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/6397679d-44ff-4fe8-b287-7a99e678d791" />
+</p>
+
+
 
 **The question arises: So how many threads should we use?**
 
