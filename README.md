@@ -88,6 +88,8 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter06: Warp Scheduler](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter06)
 
+[Chapter07: Occupancy](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter07)
+
 
 <p align="center">
  <h1 align="center">Resources </h1>
