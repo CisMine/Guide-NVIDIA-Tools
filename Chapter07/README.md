@@ -4,7 +4,7 @@
 In lesson 6, I discussed the issue of **how to select the suitable number of threads.** In this article, I will share a quite common method to determine this. Many of you might wonder **why we don't just simplify the problem by running multiple cases with different thread counts to determine the appropriate number.** This approach is only suitable if your code is simple because, if it is complex, each run will take a long time. Therefore, running multiple cases to choose the appropriate number of threads is not a good choice.
 
 <p align="center">
- <h1 align="center">Occupancy </h1>
+ <h1 align="center">Occupancy Part 1</h1>
 </p>
 
 Before diving into the article, let me give an example to help you understand what occupancy is and its utility.
