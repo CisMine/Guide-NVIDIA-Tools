@@ -32,7 +32,7 @@ You can refer to the [warp schedulers](https://github.com/CisMine/Guide-NVIDIA-T
  <h1 align="center">Causes of Low Achieved Occupancy</h1>
 </p>
 
-Achieved occupancy cannot exceed theoretical occupancy, so the first step toward increasing occupancy should be to increase theoretical occupancy by adjusting the limiting factors, for example using cudaOccupancyMaxPotentialBlockSize to gain 100% Theoretical occupancy. The next step is to check if the achieved value is close to the theoretical value. The achieved value will be lower than the theoretical value when the theoretical number of active warps is not maintained for the full time the SM is active. This occurs in the following situations
+Achieved occupancy cannot exceed theoretical occupancy, so the first step toward increasing occupancy should be to increase theoretical occupancy by adjusting the limiting factors, for example using **cudaOccupancyMaxPotentialBlockSize** to gain 100% Theoretical occupancy. The next step is to check if the achieved value is close to the theoretical value. The achieved value will be lower than the theoretical value when the theoretical number of active warps is not maintained for the full time the SM is active. This occurs in the following situations
 
 
 <p align="center">
