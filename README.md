@@ -90,6 +90,8 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter07: Occupancy Part 1](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter07)
 
+[Chapter08: Occupancy Part 2](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter08)
+
 
 <p align="center">
  <h1 align="center">Resources </h1>
