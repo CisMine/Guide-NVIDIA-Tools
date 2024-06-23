@@ -1,10 +1,4 @@
-<p align="center">
- <h1 align="center"></h1>
-</p>
 
-<p align="center">
-  <img src="" />
-</p>
 
 
 In this article, I will introduce three critical concepts in profiling: Bandwidth, Throughput, and Latency.
