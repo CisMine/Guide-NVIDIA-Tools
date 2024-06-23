@@ -92,6 +92,8 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter08: Occupancy Part 2](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter08)
 
+[Chapter09: Bandwidth - Throughput - Latency](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter09)
+
 
 <p align="center">
  <h1 align="center">Resources </h1>
