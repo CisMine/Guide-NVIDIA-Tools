@@ -66,13 +66,23 @@ We are not utilizing the maximum capacity of the SMs (the number of blocks used 
 For example, if we have 15 SMs and 100% theoretical occupancy with 4 blocks per SM, the full waves would be 60 blocks. If we only use 45 blocks, we would only achieve 75% achieved occupancy.
 
 
+**However, never focus too much on improving occupancy, because high occupancy is not necessarily good**
 
 
 
+<p align="center">
+  <img src="https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/fd84391d-6ac5-48df-8df7-df335257ed76" />
+</p>
 
+As I said in previous articles, each thread will have a certain number of registers. If the occupancy is higher ==> multiple threads are used ==> the number of registers per thread decreases ==> the thread's computational ability also decreases.
 
+`For example: if 6 workers do 6 jobs, if each worker is divided equally into 1 job ==> the worker will be stronger, if 2 workers do 6 jobs, the worker will use more energy ==> so we We need to determine whether the job is heavy or not to know how many workers are appropriate`
 
+**In conclusion: before improving occupancy, consider whether our algorithm is complex and then use the number of threads accordingly.**
 
+The question is how do we determine what is complex and what is simple? Because each computer has a different processing speed, it cannot be generalized?
+
+In the following articles I will talk more about this
 
 
 
