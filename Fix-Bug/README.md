@@ -74,7 +74,8 @@ Instead of running the command line $nsys profile ./a.out  run this
 
 $ncu --set full -o test ./a.out
 
-![image](https://github.com/CisMine/Guide-NVIDIA-Tools/assets/122800932/5e155ee8-abbb-4933-85d6-d420f052a594)
+
+![image](https://github.com/user-attachments/assets/b6441013-116f-4056-91ac-d70d9f33fcb7)
 
 If it creates the .ncu-rep file, it is successful BUT if you encounter the problem of **nsight compute permission deny**, then run these commands:
 
