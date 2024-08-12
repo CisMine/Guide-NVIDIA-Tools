@@ -79,6 +79,8 @@ $ncu --set full -o test ./a.out
 
 If it creates the .ncu-rep file, it is successful BUT if you encounter the problem of **nsight compute permission deny**, then run these commands:
 
-$sudo nano /etc/modprobe.d/nvidia.conf $options nvidia NVreg_RestrictProfilingToAdminUsers=0
+$sudo nano /etc/modprobe.d/nvidia.conf
+
+$options nvidia NVreg_RestrictProfilingToAdminUsers=0
 
 then do ctrl + o then ctrl + x ( save and exit )
