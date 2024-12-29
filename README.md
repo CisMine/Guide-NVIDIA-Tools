@@ -94,6 +94,8 @@ NVIDIA provides a suite of powerful profiling and analysis tools to help develop
 
 [Chapter09: Bandwidth - Throughput - Latency](https://github.com/CisMine/Guide-NVIDIA-Tools/tree/main/Chapter09)
 
+[Chapter10: Compute Bound - Memory Bound](https://github.com/CisMine/Guide-NVIDIA-Tools/blob/main/Chapter10/README.md)
+
 
 <p align="center">
  <h1 align="center">Resources </h1>
